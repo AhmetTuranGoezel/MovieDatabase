@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="391.0" style="-fx-background-color: #2d2e2d;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontend.controller.RecommendationItemController">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="382.0" style="-fx-background-color: #2d2e2d;" styleClass="round-layout" stylesheets="@../styles.css">
+         <children>
+            <ImageView fx:id="cover" fitHeight="97.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" styleClass="round-layout">
+               <HBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <AnchorPane prefHeight="118.0" prefWidth="242.0">
+               <children>
+                  <Label fx:id="genre" layoutX="2.0" layoutY="59.0" prefHeight="30.0" prefWidth="241.0" textFill="#badac7">
+                     <font>
+                        <Font name="Helvetica Light" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <ImageView fx:id="rImg" fitHeight="23.0" fitWidth="62.0" layoutX="-1.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
+                  <Hyperlink fx:id="movietitle" layoutX="-2.0" layoutY="3.0" onAction="#openDetails" prefHeight="61.0" prefWidth="241.0" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </AnchorPane>
+         </children>
+         <HBox.margin>
+            <Insets left="5.0" />
+         </HBox.margin>
+      </HBox>
+   </children>
+</HBox>

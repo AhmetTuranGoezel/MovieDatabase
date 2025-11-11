@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontend.controller.AddMovieController">
+   <left>
+      <SplitPane prefHeight="720.0" prefWidth="103.0" style="-fx-background-color: #92c5f1;" BorderPane.alignment="CENTER">
+         <items>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="807.0" prefWidth="100.0" style="-fx-background-color: #2d2e2d;">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="127.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToMovielist" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #92c5f1;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../movies.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="244.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#SwitchToReport" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #92c5f1;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../error.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="660.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#logOut" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #92c5f1;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../logout.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <ImageView fitHeight="77.0" fitWidth="75.0" layoutX="13.0" layoutY="13.0" onMouseClicked="#switchToStart" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Logo03.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </left>
+   <right>
+      <SplitPane prefHeight="720.0" prefWidth="588.5" style="-fx-background-color: #92c5f1;" BorderPane.alignment="CENTER">
+         <items>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane prefHeight="1019.0" prefWidth="587.0" style="-fx-background-color: #2d2e2d;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="65.0" prefWidth="588.5" text="Create Automatically" textFill="#92c5f1">
+                           <font>
+                              <Font name="Helvetica" size="30.0" />
+                           </font>
+                           <effect>
+                              <Glow level="0.2" />
+                           </effect>
+                        </Label>
+                        <ComboBox fx:id="aCategory" layoutX="181.0" layoutY="200.0" prefWidth="225.0" style="-fx-background-color: #92c5f1;" />
+                        <ComboBox fx:id="aReleaseYear" layoutX="181.0" layoutY="350.0" prefWidth="225.0" style="-fx-background-color: #92c5f1;" />
+                        <ComboBox fx:id="aReleaseYear2" layoutX="181.0" layoutY="410.0" prefWidth="225.0" style="-fx-background-color: #92c5f1;" />
+                        <Label layoutX="249.0" layoutY="311.0" text="Released year:" textFill="#92c5f1">
+                           <font>
+                              <Font name="Helvetica Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="181.0" layoutY="651.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addAutomatically" prefHeight="33.0" prefWidth="225.0" style="-fx-background-color: #92c5f1;" text="Save" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="15.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="132.0" layoutY="417.0" text="End:" textFill="#92c5f1">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="131.0" layoutY="357.0" text="Start:" textFill="#92c5f1">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="116.0" layoutY="207.0" text="Genre:" textFill="#92c5f1">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="errormsg" alignment="CENTER" layoutX="34.0" layoutY="521.0" prefHeight="18.0" prefWidth="511.0" textFill="#92c5f1" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="1005.0" prefWidth="588.0" style="-fx-background-color: #2d2e2d;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="65.0" prefWidth="584.0" text="Create Manually" textFill="#92c5f1">
+                     <font>
+                        <Font name="Helvetica" size="30.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.2" />
+                     </effect>
+                  </Label>
+                  <Button layoutX="181.0" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addImage" prefHeight="33.0" prefWidth="225.0" style="-fx-background-color: #92c5f1;" text="Add picture" textFill="#2d2e2d">
+                     <font>
+                        <Font name="Helvetica" size="15.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="title" layoutX="181.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#addManually" prefHeight="25.0" prefWidth="225.0">
+                     <font>
+                        <Font name="Helvetica Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <MenuButton fx:id="category" layoutX="181.0" layoutY="320.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #92c5f1;" textFill="#2d2e2d">
+                     <items>
+                        <CustomMenuItem mnemonicParsing="false" text="Action">
+                           <content>
+                              <CheckBox fx:id="action" text="Action" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem mnemonicParsing="false" text="Horror">
+                           <content>
+                              <CheckBox fx:id="Horror" text="Horror" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem mnemonicParsing="false" text="Fantasy">
+                           <content>
+                              <CheckBox fx:id="fantasy" text="Fantasy" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem mnemonicParsing="false" text="Drama">
+                           <content>
+                              <CheckBox fx:id="drama" text="Drama" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem mnemonicParsing="false" text="Crime">
+                           <content>
+                              <CheckBox fx:id="crime" text="Crime" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem mnemonicParsing="false" text="Thriller">
+                           <content>
+                              <CheckBox fx:id="thriller" text="Thriller" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem mnemonicParsing="false" text="Romance">
+                           <content>
+                              <CheckBox fx:id="romance" text="Romance" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem mnemonicParsing="false" text="Animation">
+                           <content>
+                              <CheckBox fx:id="animation" text="Animation" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem mnemonicParsing="false" text="Sci-Fi">
+                           <content>
+                              <CheckBox fx:id="scifi" text="Sci-Fi" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem mnemonicParsing="false" text="Mystery">
+                           <content>
+                              <CheckBox fx:id="mystery" text="Mystery" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem mnemonicParsing="false" text="Adventure">
+                           <content>
+                              <CheckBox fx:id="adventure" text="Adventure" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem mnemonicParsing="false" text="Comedy">
+                           <content>
+                              <CheckBox fx:id="comedy" text="Comedy" />
+                           </content>
+                        </CustomMenuItem>
+                     </items>
+                     <font>
+                        <Font name="Helvetica Light" size="14.0" />
+                     </font>
+                  </MenuButton>
+                  <TextField fx:id="movieLength" layoutX="181.0" layoutY="380.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="225.0">
+                     <font>
+                        <Font name="Helvetica Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="director" layoutX="181.0" layoutY="440.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="225.0">
+                     <font>
+                        <Font name="Helvetica Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="writer" layoutX="181.0" layoutY="500.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="225.0">
+                     <font>
+                        <Font name="Helvetica Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="cast" layoutX="181.0" layoutY="560.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="225.0">
+                     <font>
+                        <Font name="Helvetica Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="181.0" layoutY="651.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addManually" prefHeight="33.0" prefWidth="225.0" style="-fx-background-color: #92c5f1;" text="Save" textFill="#2d2e2d">
+                     <font>
+                        <Font name="Helvetica" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="126.0" layoutY="203.0" text="Title:" textFill="#92c5f1">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="96.0" layoutY="263.0" text="Released:" textFill="#92c5f1">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="117.0" layoutY="325.0" text="Genre:" textFill="#92c5f1">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="114.0" layoutY="383.0" text="Length:" textFill="#92c5f1">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="108.0" layoutY="444.0" text="Director:" textFill="#92c5f1">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="117.0" layoutY="504.0" text="Writer:" textFill="#92c5f1">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="124.0" layoutY="564.0" text="Cast:" textFill="#92c5f1">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="datePickerReleaseDate" layoutX="181.0" layoutY="259.0" prefHeight="26.0" prefWidth="224.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #2d2e2d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontend.controller.LoginController">
+   <children>
+      <Label alignment="CENTER" layoutX="16.0" layoutY="41.0" prefHeight="63.0" prefWidth="377.0" text="Sign up" textFill="#badac7">
+         <font>
+            <Font name="Helvetica" size="48.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </Label>
+      <TextField fx:id="tfFirstname" alignment="TOP_CENTER" layoutX="96.0" layoutY="130.0" prefHeight="31.0" prefWidth="214.0" promptText="Firstname" style="-fx-background-color: #DEDEDE;">
+         <font>
+            <Font name="Helvetica Light" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tfLastname" alignment="TOP_CENTER" layoutX="96.0" layoutY="180.0" prefHeight="31.0" prefWidth="214.0" promptText="Lastname" style="-fx-background-color: #DEDEDE;">
+         <font>
+            <Font name="Helvetica Light" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tfEmailRegister" alignment="TOP_CENTER" layoutX="96.0" layoutY="230.0" prefHeight="31.0" prefWidth="214.0" promptText="Email" style="-fx-background-color: #DEDEDE;">
+         <font>
+            <Font name="Helvetica Light" size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="pfPasswordRegister" alignment="CENTER" layoutX="96.0" layoutY="280.0" prefHeight="31.0" prefWidth="214.0" promptText="Password" style="-fx-background-color: #DEDEDE;">
+         <font>
+            <Font name="Helvetica Light" size="14.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="pfPasswordRegister2" alignment="CENTER" layoutX="96.0" layoutY="330.0" prefHeight="31.0" prefWidth="214.0" promptText="Repeat password" style="-fx-background-color: #DEDEDE;">
+         <font>
+            <Font name="Helvetica Light" size="14.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="pfAdminkey" alignment="CENTER" layoutX="96.0" layoutY="380.0" prefHeight="31.0" prefWidth="214.0" promptText="Admin key " style="-fx-background-color: #DEDEDE;">
+         <font>
+            <Font name="Helvetica Light" size="14.0" />
+         </font>
+      </PasswordField>
+      <Button layoutX="96.0" layoutY="440.0" mnemonicParsing="false" onAction="#signUpAdmin" prefHeight="32.0" prefWidth="214.0" text="Sign up" textFill="#2d2e2d">
+         <font>
+            <Font name="Helvetica" size="16.0" />
+         </font>
+      </Button>
+      <SplitPane layoutX="405.0" prefHeight="500.0" prefWidth="299.0" style="-fx-background-color: #badac7;" />
+      <Label alignment="CENTER" layoutX="439.0" layoutY="141.0" prefHeight="36.0" prefWidth="232.0" text="Welcome !" textFill="#2d2e2d">
+         <font>
+            <Font name="Helvetica" size="30.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </Label>
+      <Text fill="#2d2e2d" layoutX="460.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You already have an account? Here you can log in!" wrappingWidth="181.99999346827462">
+         <font>
+            <Font name="Helvetica" size="13.0" />
+         </font>
+      </Text>
+      <Button layoutX="464.0" layoutY="282.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="32.0" prefWidth="182.0" text="Log in" textFill="#2d2e2d">
+         <font>
+            <Font name="Helvetica" size="16.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="74.0" fitWidth="68.0" layoutX="642.0" layoutY="441.0">
+         <image>
+            <Image url="@../NoBGLogoWhiteM03.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lMandatoryField1" layoutX="311.0" layoutY="123.0" textFill="RED">
+         <font>
+            <Font name="Helvetica Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lMandatoryField2" layoutX="311.0" layoutY="172.0" textFill="RED">
+         <font>
+            <Font name="Helvetica Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lMandatoryField3" layoutX="311.0" layoutY="222.0" textFill="RED">
+         <font>
+            <Font name="Helvetica Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lMandatoryField4" layoutX="310.0" layoutY="272.0" textFill="RED">
+         <font>
+            <Font name="Helvetica Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lMandatoryField5" layoutX="311.0" layoutY="322.0" textFill="RED">
+         <font>
+            <Font name="Helvetica Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lAdminkey" layoutX="310.0" layoutY="372.0" textFill="RED">
+         <font>
+            <Font name="Helvetica Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lErrorMessage" layoutX="96.0" layoutY="413.0" prefHeight="16.0" prefWidth="214.0" textFill="RED">
+         <font>
+            <Font name="Helvetica" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

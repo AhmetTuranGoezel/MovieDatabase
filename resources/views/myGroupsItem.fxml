@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="406.0" style="-fx-background-color: #2d2e2d;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontend.controller.GroupItemController">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="63.0" prefWidth="405.0" style="-fx-background-color: #d7e0db #d7e0db;">
+         <children>
+            <ImageView fx:id="gImg" fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Hyperlink fx:id="gName" onAction="#goToGroupProfile" prefHeight="61.0" prefWidth="342.0" textFill="#2d2e2d">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Hyperlink>
+         </children>
+      </HBox>
+   </children>
+</HBox>

@@ -1,0 +1,42 @@
+.light-gray-background{
+    -fx-background-color: #F3F3F3;
+}
+
+.white-background{
+    -fx-background-color: #fff;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.round-layout{
+    -fx-border-radius: 50;
+    -fx-border-color: #D7D7D7;
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0),10,0,0,10);
+}
+
+.text-input{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-width: 0 0 1 0;
+
+
+}
+
+.selected-border{
+    -fx-background-color: #fff;
+    -fx-border-width: 0 3 0 0;
+}
+
+.selected:hover{
+    -fx-background-color: #badac7;
+}
+
+.table-column{
+    -fx-alignment: CENTER;
+}
+
+.default-color0.chart-bar { -fx-bar-fill: #92c5f1}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontend.controller.AddReviewController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2d2e2d;">
+         <children>
+            <Label alignment="CENTER" layoutX="28.0" layoutY="10.0" prefHeight="57.0" prefWidth="550.0" text="Your review" textFill="#badac7">
+               <font>
+                  <Font name="Helvetica" size="48.0" />
+               </font>
+               <effect>
+                  <Glow level="0.2" />
+               </effect>
+            </Label>
+            <Button fx:id="save" layoutX="193.0" layoutY="338.0" mnemonicParsing="false" onAction="#saveReview" prefHeight="32.0" prefWidth="214.0" style="-fx-background-color: #badac7;" text="Save" textFill="#2d2e2d">
+               <font>
+                  <Font name="Helvetica" size="16.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="comment" layoutX="91.0" layoutY="188.0" prefHeight="120.0" prefWidth="418.0" promptText="Your review" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font></TextArea>
+            <Label layoutX="325.0" layoutY="94.0" text="/ 5" textFill="#badac7">
+               <font>
+                  <Font name="Helvetica" size="16.0" />
+               </font>
+            </Label>
+            <MenuButton fx:id="addRating" layoutX="299.0" layoutY="72.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="20.0" prefWidth="41.0" style="-fx-background-color: #ffffff00;" textFill="#2d2e2d">
+              <items>
+                <MenuItem fx:id="oneS" mnemonicParsing="false" text="1" />
+                <MenuItem fx:id="twoS" mnemonicParsing="false" text="2" />
+                  <MenuItem fx:id="threeS" mnemonicParsing="false" text="3" />
+                  <MenuItem fx:id="fourS" mnemonicParsing="false" text="4" />
+                  <MenuItem fx:id="fiveS" mnemonicParsing="false" text="5" />
+              </items>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </MenuButton>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="264.0" layoutY="89.0">
+               <image>
+                  <Image url="@../Star-icon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="rating" alignment="CENTER" layoutX="305.0" layoutY="87.0" prefHeight="21.0" prefWidth="25.0" textFill="#badac7">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorMsg" alignment="CENTER" layoutX="102.0" layoutY="159.0" prefHeight="18.0" prefWidth="394.0" textFill="#badac7">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="226.0" layoutY="72.0" prefHeight="19.0" prefWidth="92.0" text="Set your rating" textFill="#badac7">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontend.controller.MovielistController">
+   <left>
+      <SplitPane prefHeight="720.0" prefWidth="103.0" style="-fx-background-color: #92c5f1;" BorderPane.alignment="CENTER">
+         <items>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="807.0" prefWidth="100.0" style="-fx-background-color: #2d2e2d;">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="127.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToMovielist" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #3fa5f8;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../movies.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="244.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#SwitchToReport" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #92c5f1;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../error.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="660.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#logOut" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #92c5f1;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../logout.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <ImageView fitHeight="77.0" fitWidth="75.0" layoutX="13.0" layoutY="13.0" onMouseClicked="#switchToStart" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Logo03.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </left>
+   <right>
+      <SplitPane prefHeight="720.0" prefWidth="413.0" style="-fx-background-color: #92c5f1;" BorderPane.alignment="CENTER">
+         <items>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="719.0" prefWidth="410.0">
+                     <content>
+                        <AnchorPane prefHeight="862.0" prefWidth="370.0" style="-fx-background-color: #2d2e2d;">
+                           <children>
+                              <Label fx:id="labeltitle" alignment="CENTER" layoutX="54.0" layoutY="30.0" prefHeight="60.0" prefWidth="282.0" textAlignment="CENTER" textFill="#92c5f1" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ldate" layoutX="10.0" layoutY="270.0" prefHeight="20.0" text="Released:" textFill="#92c5f1" visible="false">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lgenre" layoutX="10.0" layoutY="315.0" prefHeight="20.0" text="Genre:" textFill="#92c5f1" visible="false">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="llength" layoutX="10.0" layoutY="360.0" prefHeight="20.0" prefWidth="43.0" text="Length:" textFill="#92c5f1" visible="false">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ldirector" layoutX="10.0" layoutY="405.0" prefHeight="20.0" text="Director:" textFill="#92c5f1" visible="false">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lwriter" layoutX="10.0" layoutY="480.0" prefHeight="20.0" text="Writer:" textFill="#92c5f1" visible="false">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lcast" layoutX="10.0" layoutY="555.0" prefHeight="20.0" text="Cast:" textFill="#92c5f1" visible="false">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lreviews" alignment="CENTER" layoutX="91.0" layoutY="660.0" prefHeight="36.0" prefWidth="232.0" text="Reviews" textFill="#92c5f1" visible="false" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="91.0">
+                                 <font>
+                                    <Font name="Helvetica" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <Glow level="0.2" />
+                                 </effect>
+                              </Label>
+                              <Pane fx:id="pane" layoutX="-1.0" layoutY="640.0" prefHeight="2.0" prefWidth="396.0" style="-fx-background-color: #ffffff;" visible="false" />
+                              <ImageView fx:id="cover" fitHeight="150.0" fitWidth="116.0" layoutX="150.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true" />
+                              <VBox fx:id="reviewOverview" layoutX="7.0" layoutY="710.0" prefHeight="150.0" prefWidth="380.0" />
+                              <Label fx:id="labeldate" alignment="TOP_LEFT" layoutX="110.0" layoutY="270.0" prefHeight="20.0" prefWidth="270.0" textFill="#92c5f1" wrapText="true">
+                                 <font>
+                                    <Font name="Helvetica" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelgenre" alignment="TOP_LEFT" layoutX="110.0" layoutY="315.0" prefHeight="20.0" prefWidth="270.0" textFill="#92c5f1" wrapText="true">
+                                 <font>
+                                    <Font name="Helvetica" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labellength" alignment="TOP_LEFT" layoutX="110.0" layoutY="360.0" prefHeight="20.0" prefWidth="270.0" textFill="#92c5f1" wrapText="true">
+                                 <font>
+                                    <Font name="Helvetica" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labeldirector" alignment="TOP_LEFT" layoutX="110.0" layoutY="405.0" prefHeight="70.0" prefWidth="270.0" textFill="#92c5f1" wrapText="true">
+                                 <font>
+                                    <Font name="Helvetica" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelwriter" alignment="TOP_LEFT" layoutX="110.0" layoutY="480.0" prefHeight="70.0" prefWidth="270.0" textFill="#92c5f1" wrapText="true">
+                                 <font>
+                                    <Font name="Helvetica" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelcast" alignment="TOP_LEFT" layoutX="110.0" layoutY="555.0" prefHeight="70.0" prefWidth="270.0" textFill="#92c5f1" wrapText="true">
+                                 <font>
+                                    <Font name="Helvetica" size="13.0" />
+                                 </font>
+                              </Label>
+                              <MenuButton fx:id="menuButton" layoutX="339.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="55.0" style="-fx-background-color: #92c5f1 #92c5f1;" visible="false">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#movieEdit" text="Edit movie">
+                                       <graphic>
+                                          <ImageView blendMode="COLOR_BURN" fitHeight="20.0" fitWidth="20.0">
+                                             <image>
+                                                <Image url="@../edit.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </MenuItem>
+                                  <MenuItem mnemonicParsing="false" onAction="#switchToStatistics" text="Show statistics">
+                                       <graphic>
+                                          <ImageView blendMode="COLOR_BURN" fitHeight="20.0" fitWidth="20.0">
+                                             <image>
+                                                <Image url="@../statistic.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                </items>
+                                 <graphic>
+                                    <ImageView blendMode="COLOR_BURN" fitHeight="19.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../hamburger.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuButton>
+                              <Label fx:id="message" alignment="CENTER" layoutX="59.0" prefHeight="17.0" prefWidth="279.0" textFill="#92c5f1">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="720.0" prefWidth="762.0" style="-fx-background-color: #2d2e2d;">
+               <children>
+                  <TextField fx:id="search" prefHeight="30.0" prefWidth="473.0" promptText="Search">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="473.0" layoutY="1.0" mnemonicParsing="false" onAction="#filter" prefHeight="27.0" prefWidth="179.0" style="-fx-background-color: #92c5f1;" text="Search" textFill="#2d2e2d">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="652.0" layoutY="1.0" minWidth="42.0" mnemonicParsing="false" onAction="#SwitchToAddmovie" prefHeight="27.0" prefWidth="55.0" style="-fx-background-color: #92c5f1;" text="+" textFill="#2d2e2d">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="table" layoutX="-1.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="764.0" style="-fx-background-color: cbe6fb;">
+                     <columns>
+                        <TableColumn fx:id="name" prefWidth="366.50030517578125" text="Title" />
+                        <TableColumn fx:id="erschienen" minWidth="0.0" prefWidth="121.93109130859375" text="Released" />
+                        <TableColumn fx:id="kategorie" prefWidth="166.96551513671875" text="Genre" />
+                        <TableColumn fx:id="cast" prefWidth="107.0" text="Cast" />
+                     </columns>
+                  </TableView>
+                  <MenuButton layoutX="707.0" layoutY="1.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="56.0" style="-fx-background-color: #92c5f1;" textFill="#2d2e2d">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Genre">
+                           <graphic>
+                              <MenuButton fx:id="category" mnemonicParsing="false" style="-fx-background-color: #92c5f1;">
+                                 <items>
+                                    <CustomMenuItem mnemonicParsing="false" text="Action">
+                                      <content>
+                                        <CheckBox fx:id="action" text="Action" />
+                                      </content>
+                                    </CustomMenuItem>
+                                    <CustomMenuItem mnemonicParsing="false" text="Horror">
+                                       <content>
+                                          <CheckBox fx:id="horror" text="Horror" />
+                                       </content>
+                                    </CustomMenuItem>
+                                    <CustomMenuItem mnemonicParsing="false" text="Fantasy">
+                                       <content>
+                                          <CheckBox fx:id="fantasy" text="Fantasy" />
+                                       </content>
+                                    </CustomMenuItem>
+                                    <CustomMenuItem mnemonicParsing="false" text="Drama">
+                                       <content>
+                                          <CheckBox fx:id="drama" text="Drama" />
+                                       </content>
+                                    </CustomMenuItem>
+                                    <CustomMenuItem mnemonicParsing="false" text="Crime">
+                                       <content>
+                                          <CheckBox fx:id="crime" text="Crime" />
+                                       </content>
+                                    </CustomMenuItem>
+                                    <CustomMenuItem mnemonicParsing="false" text="Thriller">
+                                       <content>
+                                          <CheckBox fx:id="thriller" text="Thriller" />
+                                       </content>
+                                    </CustomMenuItem>
+                                    <CustomMenuItem mnemonicParsing="false" text="Romance">
+                                       <content>
+                                          <CheckBox fx:id="romance" text="Romance" />
+                                       </content>
+                                    </CustomMenuItem>
+                                    <CustomMenuItem mnemonicParsing="false" text="Animation">
+                                       <content>
+                                          <CheckBox fx:id="animation" text="Animation" />
+                                       </content>
+                                    </CustomMenuItem>
+                                    <CustomMenuItem mnemonicParsing="false" text="Sci-Fi">
+                                       <content>
+                                          <CheckBox fx:id="scifi" text="Sci-Fi" />
+                                       </content>
+                                    </CustomMenuItem>
+                                    <CustomMenuItem mnemonicParsing="false" text="Mystery">
+                                       <content>
+                                          <CheckBox fx:id="mystery" text="Mystery" />
+                                       </content>
+                                    </CustomMenuItem>
+                                    <CustomMenuItem mnemonicParsing="false" text="Adventure">
+                                       <content>
+                                          <CheckBox fx:id="adventure" text="Adventure" />
+                                       </content>
+                                    </CustomMenuItem>
+                                    <CustomMenuItem mnemonicParsing="false" text="Comedy">
+                                       <content>
+                                          <CheckBox fx:id="comedy" text="Comedy" />
+                                       </content>
+                                    </CustomMenuItem>
+                                 </items>
+                              </MenuButton>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Releasedate">
+                           <graphic>
+                              <TextField fx:id="tfrelease" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Cast">
+                           <graphic>
+                              <TextField fx:id="tfcast" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Title">
+                           <graphic>
+                              <TextField fx:id="tftitle" />
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView blendMode="COLOR_BURN" fitHeight="14.0" fitWidth="18.0">
+                           <image>
+                              <Image url="@../hamburger.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

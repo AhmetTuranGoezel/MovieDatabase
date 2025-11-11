@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2d2e2d;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontend.controller.FriendslistController">
+   <left>
+      <SplitPane prefHeight="720.0" prefWidth="103.0" style="-fx-background-color: #badac7;" BorderPane.alignment="CENTER">
+         <items>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #badac7;">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="807.0" prefWidth="100.0" style="-fx-background-color: #2d2e2d;">
+                     <children>
+                        <ImageView fitHeight="77.0" fitWidth="75.0" layoutX="13.0" layoutY="13.0" onMouseClicked="#switchToStart" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Logo03.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToStart" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="172.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToMovielist" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../movies.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="305.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSocial" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="23.0" fitWidth="27.0">
+                                 <image>
+                                    <Image url="@../friends.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <ColorAdjust contrast="1.0" hue="0.03" saturation="0.34" />
+                           </effect>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="358.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToDiscussionGroup" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../discussionGroupIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="491.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToOwnProfile" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0" nodeOrientation="INHERIT">
+                                 <image>
+                                    <Image url="@../user.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="543.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToStatistics" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../statistic.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="660.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#logOut" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../logout.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </left>
+   <right>
+      <SplitPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="418.0" style="-fx-background-color: #2d2e2d;">
+               <children>
+                  <TextField fx:id="tfSearchUser" layoutX="1.0" layoutY="1.0" prefHeight="27.0" prefWidth="374.0" promptText="Search User">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="addPerson" layoutX="374.0" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#searchUser" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                     <graphic>
+                        <ImageView blendMode="COLOR_BURN" fitHeight="24.0" fitWidth="24.0">
+                           <image>
+                              <Image url="@../searchPerson.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="noResult" layoutX="7.0" layoutY="29.0" prefHeight="21.0" prefWidth="367.0" textFill="#ff6464" underline="true">
+                     <font>
+                        <Font name="Helvetica Light Oblique" size="13.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.2" />
+                     </effect>
+                  </Label>
+                  <Label layoutX="8.0" layoutY="67.0" prefHeight="36.0" prefWidth="232.0" text="Friends requests" textFill="#badac7">
+                     <font>
+                        <Font name="Helvetica" size="25.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.2" />
+                     </effect>
+                  </Label>
+                  <Label layoutX="8.0" layoutY="284.0" prefHeight="36.0" prefWidth="232.0" text="Watchpartys" textFill="#badac7">
+                     <font>
+                        <Font name="Helvetica" size="25.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.2" />
+                     </effect>
+                  </Label>
+                  <Label layoutX="8.0" layoutY="501.0" prefHeight="36.0" prefWidth="232.0" text="My groups" textFill="#badac7">
+                     <font>
+                        <Font name="Helvetica" size="25.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.2" />
+                     </effect>
+                  </Label>
+                  <ScrollPane hbarPolicy="NEVER" layoutX="5.0" layoutY="105.0" prefHeight="171.0" prefWidth="407.0" style="-fx-background-color: #2d2e2d;" vbarPolicy="NEVER">
+                     <content>
+                        <VBox fx:id="overviewFR" prefHeight="171.0" prefWidth="407.0" style="-fx-background-color: #2d2e2d;" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane hbarPolicy="NEVER" layoutX="5.0" layoutY="319.0" prefHeight="171.0" prefWidth="407.0" style="-fx-background-color: #2d2e2d;" vbarPolicy="NEVER">
+                     <content>
+                        <VBox fx:id="overviewWatchparty" prefHeight="171.0" prefWidth="406.0" style="-fx-background-color: #2d2e2d;" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane hbarPolicy="NEVER" layoutX="5.0" layoutY="542.0" prefHeight="171.0" prefWidth="407.0" style="-fx-background-color: #2d2e2d;" vbarPolicy="NEVER">
+                     <content>
+                        <VBox fx:id="overviewG" prefHeight="173.0" prefWidth="406.0" style="-fx-background-color: #2d2e2d;" />
+                     </content>
+                  </ScrollPane>
+                  <Button layoutX="334.0" layoutY="289.0" mnemonicParsing="false" onAction="#switchToWatchPartyInvList" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #badac7;" text="Invitations" textFill="#2d2e2d" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="717.0" prefWidth="756.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="674.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="100.0" prefWidth="710.0" text="Community" textFill="#badac7">
+                           <font>
+                              <Font name="Helvetica" size="36.0" />
+                           </font>
+                           <effect>
+                              <Glow level="0.2" />
+                           </effect>
+                        </Label>
+                        <Button alignment="BASELINE_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showOrHideNotifications" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0" nodeOrientation="INHERIT">
+                                 <image>
+                                    <Image url="@../n.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="757.0">
+                     <children>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="33.0" prefWidth="179.0" text="Your friends" textFill="#badac7">
+                           <font>
+                              <Font name="Helvetica" size="24.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="591.0" prefWidth="760.0" style="-fx-background-color: #d7e0db;">
+                     <children>
+                        <VBox prefHeight="591.0" prefWidth="759.0">
+                           <children>
+                              <HBox prefHeight="40.0" prefWidth="680.0" styleClass="light-gray-background" stylesheets="@../styles.css">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="40.0" prefWidth="120.0" styleClass="light-gray-background" stylesheets="@../styles.css" text="Picture" textFill="#2d2e2d">
+                                       <font>
+                                          <Font name="Helvetica" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="160.0" styleClass="light-gray-background" stylesheets="@../styles.css" text="Username" textFill="#2d2e2d">
+                                       <font>
+                                          <Font name="Helvetica" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="100.0" layoutY="10.0" prefHeight="55.0" prefWidth="160.0" styleClass="light-gray-background" stylesheets="@../styles.css" text="Firstname" textFill="#2d2e2d">
+                                       <font>
+                                          <Font name="Helvetica" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="190.0" layoutY="10.0" prefHeight="55.0" prefWidth="160.0" styleClass="light-gray-background" stylesheets="@../styles.css" text="Lastname" textFill="#2d2e2d">
+                                       <font>
+                                          <Font name="Helvetica" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="280.0" layoutY="10.0" prefHeight="49.0" prefWidth="81.0" styleClass="light-gray-background" stylesheets="@../styles.css" text="Online" textFill="#2d2e2d">
+                                       <font>
+                                          <Font name="Helvetica" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="553.0" prefWidth="742.0" style="-fx-background-color: #d7e0db;" vbarPolicy="NEVER">
+                                 <content>
+                                    <VBox fx:id="friendsOverview" prefHeight="548.0" prefWidth="753.0" style="-fx-background-color: #d7e0db;" />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="1.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <ScrollPane fx:id="scrollpaneNotifications" hbarPolicy="NEVER" layoutX="430.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="127.0" prefWidth="280.0" style="-fx-background-color: #2d2e2d;" styleClass="transparent" stylesheets="@../styles.css" vbarPolicy="NEVER" visible="false">
+               <content>
+                  <VBox fx:id="notificationOverview" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="126.0" prefWidth="280.0" style="-fx-background-color: #2d2e2d;" styleClass="transparent" stylesheets="@../styles.css" visible="false" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontend.controller.SettingsController">
+   <left>
+      <SplitPane prefHeight="720.0" prefWidth="103.0" style="-fx-background-color: #badac7;" BorderPane.alignment="CENTER">
+         <items>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #badac7;">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="807.0" prefWidth="100.0" style="-fx-background-color: #2d2e2d;">
+                     <children>
+                        <ImageView fitHeight="77.0" fitWidth="75.0" layoutX="13.0" layoutY="13.0" onMouseClicked="#switchToStart" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Logo03.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToStart" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="172.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToMovielist" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../movies.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="305.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSocial" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="23.0" fitWidth="27.0">
+                                 <image>
+                                    <Image url="@../friends.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="358.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToDiscussionGroup" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../discussionGroupIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="491.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToOwnProfile" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0" nodeOrientation="INHERIT">
+                                 <image>
+                                    <Image url="@../user.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="543.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToStatistics" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../statistic.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="660.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#logOut" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../logout.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </left>
+   <right>
+      <VBox prefHeight="720.0" prefWidth="1196.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="871.0" prefWidth="1177.0" style="-fx-background-color: #2d2e2d;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="65.0" prefWidth="1178.0" text="Settings" textFill="#badac7">
+                     <font>
+                        <Font name="Helvetica" size="30.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.2" />
+                     </effect>
+                  </Label>
+                  <VBox alignment="CENTER" layoutX="50.0" layoutY="94.0" prefHeight="181.0" prefWidth="449.0">
+                     <children>
+                        <Label prefHeight="37.0" prefWidth="698.0" text="Profile details" textFill="#badac7">
+                           <font>
+                              <Font name="Helvetica" size="18.0" />
+                           </font>
+                           <effect>
+                              <Glow level="0.2" />
+                           </effect>
+                        </Label>
+                        <HBox prefHeight="109.0" prefWidth="449.0">
+                           <children>
+                              <Pane prefHeight="109.0" prefWidth="350.0" />
+                              <ImageView fx:id="imageview" fitHeight="100.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true" />
+                              <Pane prefHeight="109.0" prefWidth="220.0" />
+                           </children>
+                        </HBox>
+                        <MenuButton mnemonicParsing="false" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #badac7;" text="Edit profile" textFill="#2d2e2d">
+                          <items>
+                            <MenuItem fx:id="add" mnemonicParsing="false" onAction="#addImage" text="add a picture" />
+                            <MenuItem mnemonicParsing="false" onAction="#deleteImage" text="delete" />
+                          </items>
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                        </MenuButton>
+                     </children>
+                  </VBox>
+                  <VBox layoutY="298.0" prefHeight="183.0" prefWidth="498.0">
+                     <children>
+                        <HBox prefHeight="40.0" prefWidth="476.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="205.0" text="Username:" textFill="#badac7">
+                                 <font>
+                                    <Font name="Helvetica" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <Glow level="0.2" />
+                                 </effect>
+                              </Label>
+                              <Pane prefHeight="40.0" prefWidth="31.0" />
+                              <TextField fx:id="usernametf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="220.0">
+                                 <font>
+                                    <Font name="Helvetica Light" size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="476.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="205.0" text="Firstname:" textFill="#badac7">
+                                 <font>
+                                    <Font name="Helvetica" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <Glow level="0.2" />
+                                 </effect>
+                              </Label>
+                              <Pane prefHeight="17.0" prefWidth="31.0" />
+                              <TextField fx:id="fnametf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="220.0">
+                                 <font>
+                                    <Font name="Helvetica Light" size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="476.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="205.0" text="Lastname:" textFill="#badac7">
+                                 <font>
+                                    <Font name="Helvetica" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <Glow level="0.2" />
+                                 </effect>
+                              </Label>
+                              <Pane prefHeight="17.0" prefWidth="31.0" />
+                              <TextField fx:id="lnametf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="220.0">
+                                 <font>
+                                    <Font name="Helvetica Light" size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="90.0" prefHeight="40.0" prefWidth="476.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="205.0" text="Email:" textFill="#badac7">
+                                 <font>
+                                    <Font name="Helvetica" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <Glow level="0.2" />
+                                 </effect>
+                              </Label>
+                              <Pane prefHeight="17.0" prefWidth="31.0" />
+                              <TextField fx:id="emailtf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="220.0">
+                                 <font>
+                                    <Font name="Helvetica Light" size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Label fx:id="errorEmailMessage" alignment="CENTER" prefHeight="17.0" prefWidth="226.0" textFill="#badac7">
+                           <font>
+                              <Font name="Helvetica Bold" size="13.0" />
+                           </font>
+                           <effect>
+                              <ColorAdjust contrast="1.0" hue="0.03" saturation="0.34" />
+                           </effect>
+                           <VBox.margin>
+                              <Insets left="230.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="1.0" layoutY="457.0" prefHeight="192.0" prefWidth="480.0">
+                     <children>
+                        <Label prefHeight="61.0" prefWidth="480.0" text="Security change:" textFill="#badac7">
+                           <font>
+                              <Font name="Helvetica" size="18.0" />
+                           </font>
+                           <effect>
+                              <Glow level="0.2" />
+                           </effect>
+                        </Label>
+                        <VBox prefHeight="126.0" prefWidth="698.0">
+                           <children>
+                              <HBox prefHeight="40.0" prefWidth="698.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="205.0" text="Current password:" textFill="#badac7">
+                                       <font>
+                                          <Font name="Helvetica" size="16.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.2" />
+                                       </effect>
+                                    </Label>
+                                    <Pane prefHeight="17.0" prefWidth="31.0" />
+                                    <PasswordField fx:id="currentpw" prefHeight="25.0" prefWidth="220.0">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font></PasswordField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="40.0" prefWidth="698.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="205.0" text="New password:" textFill="#badac7">
+                                       <font>
+                                          <Font name="Helvetica" size="16.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.2" />
+                                       </effect>
+                                    </Label>
+                                    <Pane prefHeight="17.0" prefWidth="31.0" />
+                                    <PasswordField fx:id="newpw" prefHeight="25.0" prefWidth="220.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="40.0" prefWidth="698.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="205.0" text="Repeat password:" textFill="#badac7">
+                                       <font>
+                                          <Font name="Helvetica" size="16.0" />
+                                       </font>
+                                       <effect>
+                                          <Glow level="0.2" />
+                                       </effect>
+                                    </Label>
+                                    <Pane prefHeight="17.0" prefWidth="31.0" />
+                                    <PasswordField fx:id="repeatpw" prefHeight="25.0" prefWidth="220.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <Label layoutX="670.0" layoutY="152.0" prefHeight="49.0" prefWidth="272.0" text="Privacy" textFill="#badac7">
+                     <font>
+                        <Font name="Helvetica" size="18.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.2" />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="730.0" layoutY="213.0" prefHeight="37.0" prefWidth="85.0" text="Watchlist:" textFill="#badac7">
+                     <font>
+                        <Font name="Helvetica" size="16.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.2" />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="730.0" layoutY="313.0" prefHeight="37.0" prefWidth="85.0" text="History:" textFill="#badac7">
+                     <font>
+                        <Font name="Helvetica" size="16.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.2" />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="730.0" layoutY="413.0" prefHeight="37.0" prefWidth="85.0" text="Friendslist:" textFill="#badac7">
+                     <font>
+                        <Font name="Helvetica" size="16.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.2" />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="730.0" layoutY="515.0" prefHeight="37.0" prefWidth="85.0" text="Review:" textFill="#badac7">
+                     <font>
+                        <Font name="Helvetica" size="16.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.2" />
+                     </effect>
+                  </Label>
+                  <MenuButton fx:id="watchlistpv" layoutX="850.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: #badac7;" text="Visible for ..." textFill="#2d2e2d">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#wlall" text="All" />
+                        <MenuItem mnemonicParsing="false" onAction="#wlfriends" text="Friends" />
+                        <MenuItem mnemonicParsing="false" onAction="#wlnobody" text="Only me" />
+                     </items>
+                     <font>
+                        <Font name="Helvetica" size="14.0" />
+                     </font>
+                  </MenuButton>
+                  <MenuButton fx:id="historypv" layoutX="850.0" layoutY="320.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #badac7;" text="Visible for ..." textFill="#2d2e2d">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#hall" text="All" />
+                        <MenuItem mnemonicParsing="false" onAction="#hfriends" text="Friends" />
+                        <MenuItem mnemonicParsing="false" onAction="#hnobody" text="Only me" />
+                     </items>
+                     <font>
+                        <Font name="Helvetica" size="14.0" />
+                     </font>
+                  </MenuButton>
+                  <MenuButton fx:id="friendslistpv" layoutX="850.0" layoutY="420.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #badac7;" text="Visible for ..." textFill="#2d2e2d">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#frall" text="All" />
+                        <MenuItem mnemonicParsing="false" onAction="#frfriends" text="Friends" />
+                        <MenuItem mnemonicParsing="false" onAction="#frnobody" text="Only me" />
+                     </items>
+                     <font>
+                        <Font name="Helvetica" size="14.0" />
+                     </font>
+                  </MenuButton>
+                  <MenuButton fx:id="reviewpv" layoutX="850.0" layoutY="520.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="250.0" style="-fx-background-color: #badac7;" text="Visible for ..." textFill="#2d2e2d">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#reall" text="All" />
+                        <MenuItem mnemonicParsing="false" onAction="#refriends" text="Friends" />
+                        <MenuItem mnemonicParsing="false" onAction="#renobody" text="Only me" />
+                     </items>
+                     <font>
+                        <Font name="Helvetica" size="14.0" />
+                     </font>
+                  </MenuButton>
+                  <Button layoutX="478.0" layoutY="651.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateProfile" prefHeight="33.0" prefWidth="220.0" style="-fx-background-color: #badac7;" text="Save" textFill="#2d2e2d">
+                     <font>
+                        <Font name="Helvetica" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="wrongPassword" alignment="CENTER" layoutX="233.0" layoutY="626.0" prefHeight="17.0" prefWidth="224.0" textFill="#badac7">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mandatory1" layoutX="460.0" layoutY="515.0" prefHeight="20.0" prefWidth="157.0" text="*" textFill="#badac7" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mandatory2" layoutX="460.0" layoutY="555.0" prefHeight="20.0" prefWidth="157.0" text="*" textFill="#badac7" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mandatory3" layoutX="460.0" layoutY="596.0" prefHeight="20.0" prefWidth="157.0" text="*" textFill="#badac7" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

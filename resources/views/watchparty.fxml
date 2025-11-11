@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontend.controller.WatchpartyInvListController">
+   <left>
+      <SplitPane prefHeight="720.0" prefWidth="103.0" style="-fx-background-color: #badac7;" BorderPane.alignment="CENTER">
+         <items>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #badac7;">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="807.0" prefWidth="100.0" style="-fx-background-color: #2d2e2d;">
+                     <children>
+                        <ImageView fitHeight="77.0" fitWidth="75.0" layoutX="13.0" layoutY="13.0" onMouseClicked="#switchToStart" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Logo03.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToStart" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="172.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToMovielist" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../movies.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="305.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToSocial" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="23.0" fitWidth="27.0">
+                                 <image>
+                                    <Image url="@../friends.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="358.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToDiscussionGroup" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../discussionGroupIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="491.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToOwnProfile" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0" nodeOrientation="INHERIT">
+                                 <image>
+                                    <Image url="@../user.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="543.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToStatistics" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../statistic.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="28.0" layoutY="660.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#logOut" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+                           <font>
+                              <Font name="Helvetica" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="30.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../logout.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </left>
+   <right>
+      <SplitPane prefHeight="720.0" prefWidth="413.0" style="-fx-background-color: #badac7;" BorderPane.alignment="CENTER">
+         <items>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane prefHeight="1190.0" prefWidth="411.0" style="-fx-background-color: #2d2e2d;">
+                     <children>
+                        <VBox fx:id="vboxMessage" layoutX="24.0" layoutY="96.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="363.0" visible="false">
+                           <children>
+                              <VBox prefHeight="81.0" prefWidth="363.0" style="-fx-background-color: #eaeaea;">
+                                 <children>
+                                    <Label fx:id="labelUsername" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="81.0" prefWidth="362.0" textFill="#2d2e2d" wrapText="true">
+                                       <font>
+                                          <Font name="Helvetica" size="24.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets left="20.0" />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <ScrollPane prefHeight="606.0" prefWidth="780.0">
+                                 <content>
+                                    <Text fx:id="watchpartyMessage" fill="#2d2e2d" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="359.7368278503418" />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <Button fx:id="accept" alignment="CENTER" layoutX="314.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#acceptWatchpartyInvitation" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d" visible="false">
+                           <font>
+                              <Font name="Helvetica" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="25.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../erledigt.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="reject" alignment="CENTER" layoutX="363.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rejectWatchpartyInvitation" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d" visible="false">
+                           <font>
+                              <Font name="Helvetica" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView blendMode="COLOR_BURN" fitHeight="25.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../x.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #92c5f1;" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane prefHeight="977.0" prefWidth="764.0">
+               <content>
+                  <AnchorPane prefHeight="719.0" prefWidth="764.0" style="-fx-background-color: #2d2e2d;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="65.0" prefWidth="747.0" text="Watchpartys" textFill="#badac7">
+                           <font>
+                              <Font name="Helvetica" size="36.0" />
+                           </font>
+                           <effect>
+                              <Glow level="0.2" />
+                           </effect>
+                        </Label>
+                        <TableView fx:id="tableWatchparty" layoutX="5.0" layoutY="94.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="736.0" style="-fx-background-color: #d7e0db #d7e0db;">
+                           <columns>
+                              <TableColumn fx:id="columnUsername" prefWidth="200.0" style="-fx-alignment: CENTER;" text="Username" />
+                              <TableColumn fx:id="columnMovie" minWidth="0.0" prefWidth="300.0" style="-fx-alignment: CENTER;" text="Movie" />
+                              <TableColumn fx:id="columnDate" prefWidth="120.0" style="-fx-alignment: CENTER;" text="Date" />
+                              <TableColumn fx:id="columnTime" prefWidth="115.0" style="-fx-alignment: CENTER;" text="Time" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

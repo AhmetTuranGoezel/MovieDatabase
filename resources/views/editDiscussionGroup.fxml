@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2d2e2d;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frontend.controller.EditDiscussionGroupController">
+   <children>
+      <Label alignment="CENTER" layoutY="12.0" prefHeight="30.0" prefWidth="600.0" text="Edit group profile" textFill="#badac7">
+         <font>
+            <Font name="Helvetica Light" size="24.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="groupnametf" layoutX="12.0" layoutY="266.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="270.0" promptText="Enter groupname">
+         <font>
+            <Font name="Helvetica Light" size="14.0" />
+         </font>
+      </TextField>
+      <MenuButton fx:id="visibilityCreate" layoutX="319.0" layoutY="265.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="270.0" style="-fx-background-color: #badac7;" textFill="#2d2e2d">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#everyone" text="Everyone" />
+            <MenuItem mnemonicParsing="false" onAction="#friends" text="Friends" />
+         </items>
+         <font>
+            <Font name="Helvetica" size="14.0" />
+         </font>
+      </MenuButton>
+      <Button fx:id="saveButton" layoutX="204.0" layoutY="336.0" mnemonicParsing="false" onAction="#editGroup" prefHeight="32.0" prefWidth="202.0" style="-fx-background-color: #badac7;" text="Save" textFill="#2d2e2d">
+         <font>
+            <Font name="Helvetica" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorMessage" layoutX="13.0" layoutY="304.0" prefHeight="16.0" prefWidth="270.0" textFill="#badac7" underline="true">
+         <font>
+            <Font name="Helvetica Light Oblique" size="13.0" />
+         </font>
+      </Label>
+      <MenuButton layoutX="244.0" layoutY="187.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #badac7;" text="Edit picture" textFill="#2d2e2d">
+         <items>
+            <MenuItem fx:id="add" mnemonicParsing="false" onAction="#addGroupImage" text="add a picture" />
+            <MenuItem mnemonicParsing="false" onAction="#deleteGroupImage" text="delete" />
+         </items>
+         <font>
+            <Font name="Helvetica" size="13.0" />
+         </font>
+      </MenuButton>
+      <HBox layoutX="1.0" layoutY="79.0" prefHeight="109.0" prefWidth="600.0">
+         <children>
+            <Pane prefHeight="109.0" prefWidth="243.0" />
+            <ImageView fx:id="imageview" fitHeight="108.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" />
+            <Pane prefHeight="109.0" prefWidth="250.0" />
+         </children>
+      </HBox>
+      <Label fx:id="mandatoryField" layoutX="283.0" layoutY="256.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
